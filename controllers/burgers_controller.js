@@ -24,7 +24,7 @@ router.post('/', function (req, res) {
     });
 });
 
-router.post('/:id', function (req, res) { // this is a PUT
+router.put('/:id', function (req, res) {
     const condition = 'id = ' + req.params.id;
     burger.update({
         devoured: true
