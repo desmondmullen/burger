@@ -1,5 +1,6 @@
 # burger
-![Eat Da Burger!](public/assets/img/black-bean-burger.png)
+
+![Eat Da Burger!](public/assets/img/black-bean-burger-small.png)
 
 **Eat-Da-Burger is an exercise in full stack development skills with a focus on Node.js, Express, Handlebars, and SQL.** I created this for the Coding Boot Camp at UNC-Chapel Hill in March 2019.
 
