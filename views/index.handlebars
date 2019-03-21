@@ -2,44 +2,43 @@
     <img class='icon' src='assets/img/black-bean-burger.png' width=220>
     <h1 class='heading'>Eat Da Burger!</h1>
 </div>
-<div class='left-side'>
-    <section class='center'>
-        <h2>Burgers that have been created</h2>
-    </section>
-    <ul>
-        {{#each burgers}}
-        {{#unless devoured}}
-        <li>
-            <form method='POST' action='/{{this.id}}?_method=PUT'>
-                {{burger_name}} <button type='submit'>Devour this burger!</button>
-            </form>
-        </li>
-        {{/unless}}
-        {{/each}}
-    </ul>
-</div>
-
-<div class='right-side'>
-    <section class='center'>
-        <h2>Hall of Fame<br>(Burgers that have been devoured)</h2>
-    </section>
-    <ul>
-        {{#each burgers}}
-        {{#if devoured}}
-        <li>
-            {{burger_name}}
-        </li>
-        {{/if}}
-        {{/each}}
-    </ul>
-</div>
-
-<div class='clear-float'>
-    &nbsp;
+<div class='col-container'>
+    <div class='left-side'>
+        <section class='center'>
+            <h2>Burgers that have been created</h2>
+        </section>
+        <ul>
+            {{#each burgers}}
+            {{#unless devoured}}
+            <li>
+                <form method='POST' action='/{{this.id}}?_method=PUT'>
+                    {{burger_name}} &nbsp;<button type='submit'>Devour this burger!</button>
+                </form>
+            </li>
+            {{/unless}}
+            {{/each}}
+        </ul>
+    </div>
+    <div class='middle'></div>
+    <div class='right-side'>
+        <section class='center'>
+            <h2>Hall of Fame<br>(Burgers that have been devoured)</h2>
+        </section>
+        <ul>
+            {{#each burgers}}
+            {{#if devoured}}
+            <li>
+                {{burger_name}}
+            </li>
+            {{/if}}
+            {{/each}}
+        </ul>
+    </div>
 </div>
 <div class='add-a-burger'>
     <h2 class='add-a-burger-heading'>Add a Burger of your own!</h2>
     <form action='/' method='post'>
-        Burger name: <input type='text' name='burger_name' size=35> <input class='button' type='submit' value='Submit'>
+        Burger name: <input type='text' name='burger_name' autofocus size='35'> <input class='button' type='submit'
+            value='Submit'>
     </form>
 </div>
