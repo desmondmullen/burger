@@ -3,7 +3,9 @@ USE burgers_db;
 INSERT INTO burgers
     (burger_name)
 VALUES
-    ('black bean burger'),
-    ('tofu burger'),
-    ('garbonzo bean burger')
+    ('Yum Burger'),
+    ('Zippy Burger'),
+    ('Wow Burger'),
+    ('Zoinks Burger'),
+    ('Unbeliev-O Burger')
     ;
