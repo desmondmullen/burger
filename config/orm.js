@@ -19,8 +19,8 @@ function objToSql(obj) {
 
 const orm = {
     selectAll: function (table, cb) {
-        const queryString = `SELECT * FROM ${table};`
-        // console.log(queryString);
+        const queryString = `SELECT * FROM ${table} ORDER BY burger_name ASC;`
+        console.log(queryString);
         connection.query(queryString, function (err, result) {
             if (err) {
                 throw err;
@@ -30,7 +30,8 @@ const orm = {
     },
     insertOne: function (table, col, val, cb) {
         let queryString = `INSERT INTO ${table} (${col}) VALUES ('${val}');`
-        connection.query(queryString, function (err, result) {
+        connection.query(`UPDATE burgers SET last_one_devoured=?; INSERT INTO ?? (${col}) VALUES ('${val}')`, ['0', 'burgers'], function (err, result) {
+            // connection.query(queryString, function (err, result) {
             if (err) {
                 throw err;
             }
@@ -40,10 +41,7 @@ const orm = {
 
     // An example of objColVals would be {name: panther, sleepy: true}
     updateOne: function (table, objColVals, condition, cb) {
-        let queryString = `
-        UPDATE ${table} SET ${objToSql(objColVals)} WHERE ${condition};`
-        console.log(queryString);
-        connection.query(queryString, function (err, result) {
+        connection.query(`UPDATE burgers SET last_one_devoured=?; UPDATE ${table} SET last_one_devoured=? WHERE ${condition}; UPDATE ${table} SET devoured=? WHERE ${condition}`, ['0', '1', '1'], function (err, result) {
             if (err) {
                 throw err;
             }

@@ -34,6 +34,10 @@ li {
     margin: 2.5% 3.5%;
 }
 
+a.heading-text {
+    text-decoration: none;
+}
+
 .center {
     text-align: center;
 }
@@ -62,6 +66,10 @@ li {
 .right-side {
     width: 45%;
     background-color: #E8950C;
+}
+
+.last-one-added {
+    margin-left: -20%;
 }
 
 .middle {

@@ -10,6 +10,7 @@ create table burgers
 burger_name varchar
     (50) not null,
 devoured boolean not null default 0,
+last_one_devoured boolean not null default 0,
 primary key
     (id)
 );
