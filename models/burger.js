@@ -2,7 +2,7 @@ const orm = require('../config/orm.js');
 
 const burger = {
     all: function (cb) {
-        orm.selectAll('burgers', function (res) {
+        orm.selectAll('heroku_11d9ac74a83071f.burgers', function (res) {
             cb(res);
         });
     },
