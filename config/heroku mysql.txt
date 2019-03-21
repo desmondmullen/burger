@@ -1,9 +1,0 @@
-mysql://b858f5f10a6e50:b40608b0@us-cdbr-iron-east-03.cleardb.net/heroku_11d9ac74a83071f?reconnect=true
-
-mysql://b858f5f10a6e50:b40608b0
-
-
-DB_HOST us-cdbr-iron-east-03.cleardb.net
-DB_DATABASE heroku_11d9ac74a83071f
-DB_USERNAME b858f5f10a6e50
-DB_PASSWORD b40608b0
