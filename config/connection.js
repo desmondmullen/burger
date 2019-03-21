@@ -1,12 +1,12 @@
 // Set up MySQL connection.
-const mysql = require('mysql');
+const mysql = require("mysql");
 
 const connection = mysql.createConnection({
-    host: 'mysql://b4e3a6737e77f4:aefa17dc@us-cdbr-iron-east-03.cleardb.net/heroku_cdf4f3fe690dc7f?reconnect=true',
+    host: "localhost",
     port: 3306,
-    user: 'b4e3a6737e77f4',
-    password: 'aefa17dc',
-    database: 'burgers_db'
+    user: "root",
+    password: "vivian",
+    database: "burgers_db"
 });
 
 // Make connection.
