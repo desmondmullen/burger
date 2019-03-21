@@ -55,10 +55,12 @@ li {
 }
 
 .left-side {
+    width: 45%;
     background-color: #0DD1FF;
 }
 
 .right-side {
+    width: 45%;
     background-color: #E8950C;
 }
 
